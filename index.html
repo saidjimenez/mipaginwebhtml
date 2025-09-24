@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manantial - Página Principal</title>
+  <link href="bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <style>
+    .hero {
+      background: url('img/compromiso.png') center center/cover no-repeat;
+      height: 60vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 77, 64, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+    .icon-feature {
+      font-size: 3rem;
+      color: #00695c;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" style="background: linear-gradient(90deg, #00695c, #004d40);">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="index.html">Manantial</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMain"
+            aria-controls="navbarNavMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavMain">
+      <ul class="navbar-nav ms-auto gap-3 fs-5">
+        <li class="nav-item"><a class="nav-link" href="productos.html">Productos y Compras</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre-la-empresa.html">Sobre la Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre-los-empleados.html">Sobre los Empleados</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Espaciador para navbar fija -->
+<div style="height: 70px;"></div>
+
+<!-- Hero Section -->
+<section class="hero d-flex justify-content-center align-items-center mb-5">
+  <div class="hero-content">
+    <h1 class="display-4 fw-bold">Agua Pura y Natural de la Mejor Calidad</h1>
+    <p class="lead mb-4">Comprometidos con tu salud y el cuidado del medio ambiente.</p>
+    <a href="productos.html" class="btn btn-lg btn-success me-3">Comprar Ahora</a>
+    <a href="sobre-la-empresa.html" class="btn btn-lg btn-outline-light">Conócenos</a>
+  </div>
+</section>
+
+<!-- Beneficios -->
+<section class="container mb-5 text-center">
+  <h2 class="fw-bold mb-4">¿Por qué elegir Manantial?</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <i class="bi bi-droplet-fill icon-feature mb-3"></i>
+      <h4>Agua Cristalina</h4>
+      <p>Pasamos por rigurosos controles de calidad para asegurar la pureza y frescura en cada gota.</p>
+    </div>
+    <div class="col-md-4">
+      <i class="bi bi-recycle icon-feature mb-3"></i>
+      <h4>Procesos Sostenibles</h4>
+      <p>Utilizamos envases reciclables y procesos que respetan el medio ambiente.</p>
+    </div>
+    <div class="col-md-4">
+      <i class="bi bi-truck icon-feature mb-3"></i>
+      <h4>Entrega Rápida</h4>
+      <p>Servicio a domicilio confiable, para que disfrutes tu agua sin salir de casa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Destacados -->
+<section class="container mb-5">
+  <h2 class="fw-bold mb-4 text-center">Productos Destacados</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card shadow-sm h-100 border-0">
+        <img src="img/botellon.jpg" class="card-img-top p-3" alt="Botellón 20 Litros" style="object-fit: contain; height: 180px;">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold">Botellón 20 L</h5>
+          <p class="text-success fw-semibold">Bs 20</p>
+          <a href="productos.html" class="btn btn-success">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm h-100 border-0">
+        <img src="img/sachets.png" class="card-img-top p-3" alt="Sachet 500 ml" style="object-fit: contain; height: 180px;">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold">Sachet 500 ml</h5>
+          <p class="text-success fw-semibold">Bs 1.50</p>
+          <a href="productos.html" class="btn btn-success">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm h-100 border-0">
+        <img src="img/botella3lit.jpg" class="card-img-top p-3" alt="Botella 3 Litros" style="object-fit: contain; height: 180px;">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold">Botella 3 L</h5>
+          <p class="text-success fw-semibold">Bs 6</p>
+          <a href="productos.html" class="btn btn-success">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sobre la Empresa Resumen -->
+<section class="container mb-5 d-flex flex-wrap align-items-center gap-4">
+  <img src="img/fabrica.png" alt="Fábrica Manantial" class="img-fluid rounded shadow" style="max-width: 40%; min-width: 300px; object-fit: cover;">
+  <div>
+    <h2 class="fw-bold mb-3">Comprometidos con Calidad y Sostenibilidad</h2>
+    <p>En Manantial nos esforzamos día a día por entregar agua pura y natural, cuidando cada proceso desde la fuente hasta tu hogar.</p>
+    <p>Nuestra visión es brindar productos de calidad garantizada, con respeto al medio ambiente y atención personalizada a nuestros clientes.</p>
+    <a href="sobre-la-empresa.html" class="btn btn-outline-success">Más sobre nosotros</a>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="container mb-5">
+  <h2 class="fw-bold mb-4 text-center">Lo que dicen nuestros clientes</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card shadow-sm p-4 bg-light rounded">
+        <p>"La calidad del agua es excepcional. Servicio rápido y muy atentos."</p>
+        <h6 class="text-success fw-bold">- María S.</h6>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm p-4 bg-light rounded">
+        <p>"Me encanta que usen envases reciclables, es un plus para cuidar el planeta."</p>
+        <h6 class="text-success fw-bold">- Juan M.</h6>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm p-4 bg-light rounded">
+        <p>"Siempre pido el botellón 20L, llegó perfecto y el sabor es fresco."</p>
+        <h6 class="text-success fw-bold">- Ana G.</h6>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 text-center" style="background: #00695c; color: #eee;">
+  <p class="mb-2 fs-6">© 2025 Manantial - Agua Pura y Natural</p>
+  <div>
+    <a href="#" aria-label="Facebook" class="text-white fs-4 mx-2"><i class="bi bi-facebook"></i></a>
+    <a href="#" aria-label="Twitter" class="text-white fs-4 mx-2"><i class="bi bi-twitter"></i></a>
+    <a href="#" aria-label="Instagram" class="text-white fs-4 mx-2"><i class="bi bi-instagram"></i></a>
+  </div>
+</footer>
+
+<script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>

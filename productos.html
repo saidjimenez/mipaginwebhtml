@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manantial - Productos y Compras</title>
+  <link href="bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" style="background: linear-gradient(90deg, #00695c, #004d40);">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="index.html">Manantial</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMain"
+            aria-controls="navbarNavMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavMain">
+      <ul class="navbar-nav ms-auto gap-3 fs-5">
+        <li class="nav-item"><a class="nav-link active" href="productos.html">Productos y Compras</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre-la-empresa.html">Sobre la Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre-los-empleados.html">Sobre los Empleados</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Espaciador para navbar fija -->
+<div style="height: 70px;"></div>
+
+<!-- Sección Productos -->
+<section id="productos" class="container mb-5 animate-on-scroll">
+  <h2 class="section-title mb-4 text-center fw-bold fs-2">Nuestros Productos</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div id="botellon" class="col">
+      <div class="card position-relative h-100 shadow-sm border-0">
+        <span class="card-price">Bs 20</span>
+        <img src="img/botellon.jpg" class="card-img-top mx-auto mt-3" alt="Botellón 20 Litros" style="width: 140px; height: 140px; object-fit: contain;" />
+        <div class="card-body text-center d-flex flex-column">
+          <h5 class="card-title fw-bold">Botellón 20 L</h5>
+          <button type="button" class="btn btn-success btn-lg mt-auto" onclick="agregarAlCarrito('Botellón 20 L', 20)">
+            <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="sachet" class="col">
+      <div class="card position-relative h-100 shadow-sm border-0">
+        <span class="card-price">Bs 1.50</span>
+        <img src="img/sachets.png" class="card-img-top mx-auto mt-3" alt="Sachet 500 ml" style="width: 140px; height: 140px; object-fit: contain;" />
+        <div class="card-body text-center d-flex flex-column">
+          <h5 class="card-title fw-bold">Sachet 500 ml</h5>
+          <button type="button" class="btn btn-success btn-lg mt-auto" onclick="agregarAlCarrito('Sachet 500 ml', 1.5)">
+            <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="botella3L" class="col">
+      <div class="card position-relative h-100 shadow-sm border-0">
+        <span class="card-price">Bs 6</span>
+        <img src="img/botella3lit.jpg" class="card-img-top mx-auto mt-3" alt="Botella 3 Litros" style="width: 140px; height: 140px; object-fit: contain;" />
+        <div class="card-body text-center d-flex flex-column">
+          <h5 class="card-title fw-bold">Botella 3 L</h5>
+          <button type="button" class="btn btn-success btn-lg mt-auto" onclick="agregarAlCarrito('Botella 3 L', 6)">
+            <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="botella5L" class="col">
+      <div class="card position-relative h-100 shadow-sm border-0">
+        <span class="card-price">Bs 9</span>
+        <img src="img/botella5lit.jpg" class="card-img-top mx-auto mt-3" alt="Botella 5 Litros" style="width: 140px; height: 140px; object-fit: contain;" />
+        <div class="card-body text-center d-flex flex-column">
+          <h5 class="card-title fw-bold">Botella 5 L</h5>
+          <button type="button" class="btn btn-success btn-lg mt-auto" onclick="agregarAlCarrito('Botella 5 L', 9)">
+            <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="botella7L" class="col">
+      <div class="card position-relative h-100 shadow-sm border-0">
+        <span class="card-price">Bs 12</span>
+        <img src="img/botella7lit.png" class="card-img-top mx-auto mt-3" alt="Botella 7 Litros" style="width: 140px; height: 140px; object-fit: contain;" />
+        <div class="card-body text-center d-flex flex-column">
+          <h5 class="card-title fw-bold">Botella 7 L</h5>
+          <button type="button" class="btn btn-success btn-lg mt-auto" onclick="agregarAlCarrito('Botella 7 L', 12)">
+            <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Carrito de compras -->
+<section id="carrito" class="container my-5 p-4 bg-white rounded shadow">
+  <h2 class="section-title mb-4 text-center fw-bold">Carrito de Compras</h2>
+  <ul id="lista-carrito" class="list-group mb-3"></ul>
+  <p id="total" class="fs-4 fw-bold text-end">Total: Bs0</p>
+</section>
+
+<!-- Formulario Envío Pedido -->
+<section id="pedido" class="container my-5 p-4 bg-white rounded shadow">
+  <h2 class="section-title mb-4 text-center fw-bold">Enviar Pedido</h2>
+  <form id="formularioPedido" novalidate>
+    <div class="mb-3">
+      <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+      <input type="text" class="form-control form-control-lg" id="nombre" placeholder="Tu nombre completo" required />
+      <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label fw-semibold">Correo electrónico</label>
+      <input type="email" class="form-control form-control-lg" id="email" placeholder="Tu correo electrónico" required />
+      <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+    </div>
+    <div class="mb-3">
+      <label for="direccion" class="form-label fw-semibold">Dirección de entrega</label>
+      <textarea class="form-control form-control-lg" id="direccion" rows="3" placeholder="Dirección para entrega" required></textarea>
+      <div class="invalid-feedback">Por favor, ingresa la dirección de entrega.</div>
+    </div>
+    <div class="mb-3">
+      <label for="mensaje" class="form-label fw-semibold">Comentarios adicionales (opcional)</label>
+      <textarea class="form-control form-control-lg" id="mensaje" rows="3" placeholder="Comentarios"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success btn-lg w-100 rounded-pill fw-bold">Enviar Pedido</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 text-center" style="background: #00695c; color: #eee;">
+  <p class="mb-0">© 2025 Manantial - Agua Pura y Natural</p>
+</footer>
+
+<script src="bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

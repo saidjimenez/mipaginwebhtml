@@ -1,0 +1,92 @@
+body {
+    background: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+    background: linear-gradient(90deg, #00695c, #004d40);
+}
+.carousel-caption {
+    background-color: rgba(0,0,0,0.55);
+    border-radius: 0.5rem;
+    animation: fadeInUp 1s ease forwards;
+}
+.card-price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #28a745cc;
+    color: white;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    z-index: 10;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+section#empleados img {
+    transition: transform 0.3s ease;
+}
+section#empleados img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+#carrito ul {
+    max-height: 300px;
+    overflow-y: auto;
+}
+footer {
+    background: #00695c;
+    color: #eee;
+}
+footer a {
+    color: #eee;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: #c8e6c9;
+}
+/* Animaciones fadeIn y slideUp */
+@keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+.fade-in-up {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-name: fadeInUp;
+}
+/* Aparece en el scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Botón carrito animado */
+#lista-carrito li {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+#lista-carrito li.show-item {
+    opacity: 1;
+    transform: scale(1);
+}
+/* Botón modal animación pulsante */
+.btn-info {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+}
